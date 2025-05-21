@@ -1,0 +1,22 @@
+.home-page{
+    margin: 0;
+    background-color: #ffffff;
+}
+
+.container{
+    width: 100%;
+    position: relative;
+    background-color: red;
+}
+.ourServices{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    background-color: #4A4E69;
+}
+.quinceanos{
+    padding: 10px;
+    margin: 10px;
+    width: 50%;
+    background-color: red;
+}

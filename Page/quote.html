@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/quote.css">
-
+    <link rel="stylesheet" href="../style/footer.css">
 </head>
 
 <body class="quote-page">
@@ -40,7 +40,7 @@
                     <input type="number" id="extra-pics" min="101" placeholder="e.g. 120">
                     <p style="font-size: 12px;">It's $10 per extra picture after 100.</p>
                 </div>
-                    <button type="button" class="submit-button" onclick="generateQuote()">Make a quote</button>
+                    <button type="button" class="quote-button" onclick="generateQuote()">Make a quote</button>
             </form>
         </div>
         <div id="containerResult">
@@ -54,12 +54,15 @@
             <p id="p-quote-price">The coverage of the event is: $</p>
             <p>If you have any questions, <a href="#">Contact us</a></p>
             <div class="buttons-section">
-                <button onclick="hideQuote()">Generate a new quote</button>
-                <button onclick="sendQuote()">Let's do it</button>
+                <button onclick="hideQuote()" class="quote-button">Generate a new quote</button>
+                <button onclick="sendQuote()" class="quote-button">Let's do it</button>
             </div>
         </div>
     </div>
+    <div id="footer-container"></div>
     <script src="../js/script.js"></script>
     <script src="../js/loadHeader.js"></script>
+    <script src="../js/loadFooter.js"></script>
+    
 </body>
 </html>

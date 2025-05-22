@@ -10,7 +10,7 @@ html{
 }
 .contact-main-container{
     display: flex;
-    margin: 0;
+    margin: 15px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;

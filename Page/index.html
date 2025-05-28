@@ -12,7 +12,7 @@
 
 <body class="home-page">
     <div id="header-container"></div>
-
+    <div class="welcome-message" id="welcomeMessage"></div>
     <section class="intro-section">
         <h1>Professional Photography</h1>
         <p>
@@ -31,17 +31,18 @@
 
     <div class="grid-container">
         <div class="card">
-            <img src="../images/quinceanos.png" class="card-image" width="200px" height="300px">
+            <a href="../Page/quinceanos.html"><img src="../images/quinceanos.png" class="card-image" width="200px" height="300px"  loading="lazy"></a>
+            
             <h3>Quinceaños</h3>
             <p>A quinceañera is more than just a celebration — 
                 it’s a once-in-a-lifetime moment when a girl steps 
                 into a new chapter of life, surrounded by love, 
                 tradition, and joy.
             </p>
-            <a href="quinceaneras.html" class="card-link">Learn More →</a>
+            <a href="../Page/quinceanos.html" class="card-link">Learn More →</a>
         </div>
         <div class="card">
-            <img src="../images/wedding.png" class="card-image" width="200px" height="300px">
+            <img src="../images/wedding.png" class="card-image" width="200px" height="300px" loading="lazy">
             <h3>Weddings</h3>
             <p>A quinceañera is more than just a celebration — 
                 it’s a once-in-a-lifetime moment when a girl steps 
@@ -51,7 +52,7 @@
             <a href="weddings.html" class="card-link">Learn More →</a>
         </div>
         <div class="card">
-            <img src="../images/private-event.png" class="card-image" width="200px" height="300px">
+            <img src="../images/private-event.png" class="card-image" width="200px" height="300px"  loading="lazy">
             <h3>Private events</h3>
             <p>A quinceañera is more than just a celebration — 
                 it’s a once-in-a-lifetime moment when a girl steps 
@@ -61,7 +62,7 @@
             <a href="private-events.html" class="card-link">Learn More →</a>
         </div>
         <div class="card">
-            <img src="../images/party.png" class="card-image" width="200px" height="300px">
+            <img src="../images/party.png" class="card-image" width="200px" height="300px"  loading="lazy">
             <h3>Partys</h3>
             <p>A quinceañera is more than just a celebration — 
                 it’s a once-in-a-lifetime moment when a girl steps 
@@ -79,5 +80,14 @@
     <div id="footer-container"></div>
     <script src="../js/loadHeader.js"></script>
     <script src="../js/loadFooter.js"></script>
+    <script>
+    // Show welcome message if user is logged in
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
+    if (loggedInUser && loggedInUser.name) {
+      document.getElementById("welcomeMessage").textContent =
+        `Welcome back, ${loggedInUser.name}!`;
+    }
+  </script>
 </body>
 </html>

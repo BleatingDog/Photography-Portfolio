@@ -34,7 +34,7 @@ html{
 }
 .signUp-header h2{
     font-size: 30px;
-    font-family: 'Trebuchet MS', sans-serif;;
+    font-family: 'Trebuchet MS', sans-serif;
     color: white;
     text-shadow: 3px 4px 5px rgba(0, 0, 0, 1)
 }
@@ -48,7 +48,7 @@ html{
     box-shadow: 0 0 10px black;
     
 }
-.signUp-page .submit{
+.container .submit{
     display: block;
     padding: 10px;
     margin: auto;

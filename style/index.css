@@ -1,7 +1,16 @@
 .home-page{
     margin: 0;
     background-color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Trebuchet MS','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.welcome-message {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding-top: 20px;
+  color: #22223b;
+  background-color: #f7f7f7;
 }
 .intro-section {
   padding: 40px 20px;
@@ -26,7 +35,8 @@
 }
 
 .card{
-    padding: 5px;
+    padding: 9px;
+    padding-bottom: 5px;
     background-color: white;
     box-shadow: 0 0 15px black;
     overflow: hidden;

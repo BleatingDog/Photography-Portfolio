@@ -26,10 +26,10 @@
                 size="40"
                 maxlength="50">
                 
-                <label for="name">Last name:</label>
+                <label for="lastName">Last name:</label>
                 
                 <input 
-                id="name"
+                id="lastName"
                 type="text" 
                 placeholder="Enter your last name" 
                 size="40"
@@ -55,10 +55,9 @@
                 type="password" 
                 placeholder="**********" 
                 size="40">
-                            
                 <br>
                 <br>
-                <input class="submit" type="submit">
+                <button type="button" class="submit" onclick="signUp()">Sign up</button>
                 <a href="../Page/login.html">or log in</a>
             </form>
         </div>
@@ -66,5 +65,57 @@
     <div id="footer-container"></div>
     <script src="../js/loadHeader.js"></script>
     <script src="../js/loadFooter.js"></script>
+    <script>
+        // Load existing users from localStorage or initialize an empty object
+        const users = JSON.parse(localStorage.getItem("users")) || {};
+
+        function signUp() {
+            const name = document.getElementById('name').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const telephone = document.getElementById('telephone').value.trim();
+            const password = document.getElementById('password').value;
+
+            if (!name || !lastName || !email || !telephone || !password) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // Get existing users from localStorage or start with empty array
+            const users = JSON.parse(localStorage.getItem("users")) || [];
+            console.log(Array.isArray(users));
+            // Check if email already exists
+            const existingUser = users.find(u => u.email === email);
+            if (existingUser) {
+                alert("This email is already registered in our database.");
+                return;
+            }
+
+            // Add new user
+            const newUser = {
+                name,
+                lastName,
+                email,
+                telephone,
+                password
+            };
+            users.push(newUser);
+
+            // Save back to localStorage
+            localStorage.setItem("users", JSON.stringify(users));
+
+            alert("User registered successfully!");
+
+            // Clear form fields
+            document.getElementById('name').value = "";
+            document.getElementById('lastName').value = "";
+            document.getElementById('email').value = "";
+            document.getElementById('telephone').value = "";
+            document.getElementById('password').value = "";
+
+            console.log(users); // Debug
+        }
+    </script>
+
 </body>
 </html>

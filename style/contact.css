@@ -2,6 +2,14 @@ html{
     margin: 0;
     height: 100%;
 }
+.contact-title{
+    text-align: center;
+    padding: 10px;
+    font-size: 1.4em;
+    color: #4A4E69;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
+}
 .contact-page{
     margin: 0;
     height: 100%;
@@ -25,11 +33,6 @@ margin-bottom: 10px;
 display: block;
 padding-top: 15px;
 padding-bottom: 5px;
-}
-.contact-title{
-text-align: center;
-padding: 10px;
-font-size: 24px;
 }
 .contact-form-container{
 box-shadow: 0 0 10px black;

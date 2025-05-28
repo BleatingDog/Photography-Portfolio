@@ -1,12 +1,15 @@
+
 .quote-page {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100%;
   margin: 0;
+  font-family: 'Trebuchet MS','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 #mainContainer{
-    margin: 0;
+    padding: 50px 0;
     display:flex;
     flex-grow: 1;
     background-color: #4A4E69;

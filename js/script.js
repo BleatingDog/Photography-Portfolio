@@ -60,9 +60,11 @@ function generateQuote() {
         if (numPics === "6") price = 750;
     }
 
+    //Showing the result container and hiding the quote container 
     document.getElementById("containerResult").style.display = "block";
     document.getElementById("containerQuote").style.display = "none"; 
 
+    //Setting values of the elements inside container result
     document.getElementById("p-event-selected").textContent = "Type of event: " + eventType;
     document.getElementById("p-type-of-pics").textContent = "Photo format: " + picType;
     document.getElementById("p-number-of-pics").textContent = 

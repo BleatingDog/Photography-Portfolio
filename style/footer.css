@@ -4,3 +4,17 @@ footer{
     padding-top: 10px;
     background-color: rgb(211, 191, 191);
 }
+.footer-links {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.footer-links a {
+  color: #000000;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

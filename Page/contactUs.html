@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact - Photo Impact</title>
     <link rel="stylesheet" href="../style/contact.css">
     <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -41,7 +42,7 @@
                     cols="40" 
                     rows="15"></textarea>
                 
-                <button class="contact-button" onclick="sendContact()" type="button">Submit</button>
+                <button class="submit-button" onclick="sendContact()" type="submit">Submit</button>
             </form>
         </div>
 
@@ -58,8 +59,15 @@
     <script src="../js/loadFooter.js"></script>
     <script>
         function sendContact(){
-            alert("Message has been sent. We will contact you via email as soon as posible.");
-            clearInputs();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+            if(name && email && message){
+                alert("Message has been sent. We will contact you via email as soon as posible.");
+                clearInputs();
+            } else {
+                alert("Make sure to input all the fields");
+            }
         }
 
         function clearInputs(){

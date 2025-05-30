@@ -1,15 +1,10 @@
-body{
-    margin: 0;
-}
 .quinceanos-main {
   padding: 50px 10%;
   background-color: #fdf6f0;
   display: flex;
   justify-content: center;
   font-family: 'Trebuchet MS','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
-
 .quinceanera-section {
   max-width: 900px;
   width: 100%;
@@ -22,7 +17,6 @@ body{
 .quinceanera-text h1 {
   font-size: 36px;
   color: #9a8c98;
-  font-family: 'Trebuchet MS', sans-serif;
 }
 
 .quinceanera-text p {
@@ -38,6 +32,24 @@ body{
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+#images-portfolio{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1400px;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin: 10px auto 20px;
+}
+#images-portfolio img{
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+#images-portfolio img:hover{
+  transform: scale(1.05);
+}
 @media (max-width: 768px) {
   .quinceanera-section {
     grid-template-columns: 1fr;
@@ -48,3 +60,4 @@ body{
     order: -1;
   }
 }
+

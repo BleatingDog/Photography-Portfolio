@@ -1,13 +1,11 @@
-html{
-    height: 100%;
-    margin: 0;
-}
 .signUp-page{
     margin: 0;
     height: 100%;
     display: flex;
     flex-direction: column;
     background-color: #4A4E69;
+    font-family: 'Trebuchet MS','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 .signUp-main-container{
     flex-grow: 1;
@@ -26,7 +24,6 @@ html{
 }
 .signUp-header{
     text-align: center;
-    font-size: 24px;
     margin: 0;
     width: 100%;
     background-color: #4A4E69;
@@ -34,7 +31,6 @@ html{
 }
 .signUp-header h2{
     font-size: 30px;
-    font-family: 'Trebuchet MS', sans-serif;
     color: white;
     text-shadow: 3px 4px 5px rgba(0, 0, 0, 1)
 }
@@ -46,10 +42,15 @@ html{
     border-radius: 15px;
     padding-left: 15px;
     box-shadow: 0 0 10px black;
-    
 }
-.container .submit{
+.container input{
+    padding: 5px;
+}
+.container a{
     display: block;
-    padding: 10px;
-    margin: auto;
+    margin-top: 15px;
+    text-decoration: none;
+}
+.container a:hover{
+    text-decoration: underline;
 }

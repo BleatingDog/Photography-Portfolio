@@ -102,16 +102,3 @@
   color: #4A4E69;
 }
 
-.quote-button {
-  background-color: #4A4E69;
-  color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  font-size: 1rem;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.quote-button:hover {
-  background-color: #9A8C98;
-}

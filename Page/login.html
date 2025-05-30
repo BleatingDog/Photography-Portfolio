@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/login.css">
-    <title>Document</title>
+    <title>Photo Impact</title>
 </head>
 <body class="login-page">
     <div id="header-container"></div>
@@ -16,7 +17,7 @@
             <h2>Good to see you again</h2>
         </header>
         <div class="login-form-container">
-            <form id="loginForm">
+            <form id="login-form">
                 <label for="email">Your email</label>
                 <input type="email" id="email" class="text-input" placeholder="e.g. email@gmail.com">
                 
@@ -25,7 +26,7 @@
                 
                 <div id="error-message" style="color: red; margin-top: 10px;"></div>
                 
-                <input type="submit" value="Login" style="padding: 5px; border-radius: 25px; max-width: 150px; margin: auto;">
+                <input type="submit" value="Login" class="submit-button" style="padding: 5px; border-radius: 25px; max-width: 150px; margin: auto;">
             </form>
 
             <div class="main-container-footer">
@@ -42,7 +43,7 @@
     <script>
         // Attach the form submission handler once the DOM is loaded
         document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("loginForm").addEventListener("submit", function (e) {
+            document.getElementById("login-form").addEventListener("submit", function (e) {
                 e.preventDefault(); // Prevent form from reloading the page
 
                 const users = JSON.parse(localStorage.getItem("users")) || [];
@@ -60,7 +61,7 @@
                     errorMessage.textContent = ""; // Clear error
                     alert("Login succesful!");
                     localStorage.setItem("loggedInUser", JSON.stringify(user));
-                    window.location.href = "index.html"; // Redirect
+                    window.location.href = "index.html"; // Redirect to home page
                 }
             });
         });

@@ -34,3 +34,11 @@ If you have Python installed:
 - **Python 3:**
   ```bash
   python -m http.server
+
+- **Python 2:**
+    ```bash
+    python -m SimpleHTTPServer
+
+This will start a local server. Open your browser and go to:
+```bash
+http://localhost:8000
